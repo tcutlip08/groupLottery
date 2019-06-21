@@ -12,9 +12,9 @@
 <body>
     <div class="jumbotron">
         <h1 class="display-4" style="text-align: center;">Lets Play Lottery</h1>
-        <button class="btn btn-primary" id="button" style="text-align: center;"><strong>?</strong></button>
-        <h3 id="display" style="text-align: center;"></h3>
+        <p class="text-center" style="width: 100%; text-align: center;"><button class="btn btn-primary" id="button"><strong>?</strong></button></p>
     </div>
+    <h3 id="display" style="text-align: center;"></h3>
     <script type="text/javascript">
         $(document).ready(function () {
 
@@ -30,7 +30,7 @@
 
                 var displayNum = numArray.join("");
 
-                $("#display").text(displayNum);
+                $("#display").prepend(displayNum+"<br><hr>");
             });
         });
     </script>
