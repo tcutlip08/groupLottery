@@ -12,20 +12,26 @@
 <body>
     <div class="jumbotron">
         <h1 class="display-4" style="text-align: center;">Lets Play Lottery</h1>
-        <button class="btn btn-primary" id="button" style="float: center;"><strong>?</strong></button>
+        <button class="btn btn-primary" id="button" style="text-align: center;"><strong>?</strong></button>
+        <h3 id="display" style="text-align: center;"></h3>
     </div>
-    <!-- <script>
-        // $("#button").on("click", function(){
-        //     console.log("hello");
-        // });
-    </script> -->
     <script type="text/javascript">
+        $(document).ready(function () {
 
-        $("#button").on("click", function () {
-            var num = Math.floor(Math.random()*10);
-            var numArray = [];
-            numArray = push(num);
-            console.log(numArray);
+
+            $("#button").on("click", function () {
+
+                var numArray= [];
+
+                for (let i = 0; i < 9; i++) {
+                    var num = Math.floor(Math.random() * 10);
+                    numArray.push(num);
+                }
+
+                var displayNum = numArray.join("");
+
+                $("#display").text(displayNum);
+            });
         });
     </script>
 </body>
