@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Lottery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 class="display-4" style="text-align: center;">Lets Play Lottery</h1>
+        <button class="btn btn-primary" id="button" style="float: center;"><strong>?</strong></button>
+    </div>
+    <!-- <script>
+        // $("#button").on("click", function(){
+        //     console.log("hello");
+        // });
+    </script> -->
+    <script type="text/javascript">
+
+        $("#button").on("click", function () {
+            var num = Math.floor(Math.random()*10);
+            var numArray = [];
+            numArray = push(num);
+            console.log(numArray);
+        });
+    </script>
+</body>
+
+</html>
